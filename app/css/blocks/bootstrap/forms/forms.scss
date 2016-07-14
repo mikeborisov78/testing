@@ -1,0 +1,29 @@
+//
+// Forms
+// --------------------------------------------------
+
+// Form-group
+.form-group{
+
+}
+	// Label
+	.control-label{
+		font-size: $font-size-h6;
+		font-weight: 600;
+
+		// Form-horizontal Компенсация $font-size-h6 (13px)
+		@media (min-width: $screen-sm-min) {
+			.form-horizontal & {
+				padding-top: ($padding-base-vertical + 1 + 1); // Default padding plus a border + компенсация шрифта 13px
+			}
+		}
+	}
+
+	// Form-control
+	.form-control {
+		font-weight: 400;
+		-webkit-appearance:none;  // Remove default shadow Webkit Mobile
+		@include box-shadow(none);
+
+	}
+

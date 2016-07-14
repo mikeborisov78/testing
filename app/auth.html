@@ -1,0 +1,113 @@
+<!doctype html >
+<html lang="ru">
+<head>
+    <title>Auth Page</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <!-- build: cssPlugins -->
+    <!-- end build -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<!-- content -->
+	<div class="content">
+		<div class="container">
+			<div class="window">
+				<div class="window__header">
+					<h1 class="logotype">Logo</h1>
+				</div>
+				<div class="window__body">
+
+					<div id="window-auth-forms">
+						<ul class="tab_nav">
+							<li class="tab_nav__item active">
+								<a href="#form-auth" class="tab_nav__link" data-toggle="tab">Вход в панель</a>
+							</li>
+							<li class="tab_nav__item">
+								<a href="#form-registration" class="tab_nav__link" data-toggle="tab">Регистрация</a>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+
+							<form id="form-auth" class="window_form tab-pane active" method="post" action=".">
+								<div class="form-group">
+									<input type="text" name="login" class="form-control" placeholder="Логин или E-mail" />
+									<input type="password" name="password" class="form-control" placeholder="Пароль" />
+								</div>
+								<div class="form-group">
+									<button type="submit" name="auth" class="btn btn-primary btn-block">Войти</button>
+									<p><a href="#form-recovery" class="js-jump_forms" data-id="#form-recovery">Забыли пароль?</a></p>
+								</div>
+							</form>
+
+							<form id="form-registration" class="window_form tab-pane" method="post" action=".">
+								<div class="form-group">
+									<input type="email" name="email" class="form-control" placeholder="E-mail" />
+									<input id="form-registration-password" type="password" name="password" class="form-control" placeholder="Пароль" />
+									<input type="password" name="confirm_password" class="form-control" placeholder="Повторить пароль" />
+								</div>
+								<div class="form-group">
+									<button type="submit" name="registration" class="btn btn-primary btn-block">Зарегистрироваться</button>
+									<p>Регистрируясь, вы соглашаетесь с нашими <br/><a href="#modal-rules" data-toggle="modal" data-target="#modal-rules">условиями использования и политикой конфиденциальности</a></p>
+								</div>
+							</form>
+
+						</div>
+					</div>
+
+					<form id="form-recovery" class="window_form form_recovery" method="post" action="." style="display: none;">
+						<div class="form-group">
+							<div class="window_form__title">Забыли пароль?</div>
+							<div class="window_form__info">Не переживайте. Просто введите свою эл. почту или логин, и мы вышлем инструкцию по восстановлению</div>
+						</div>
+						<div class="form-group">
+							<input type="text" name="login" class="form-control" placeholder="Логин или E-mail" />
+						</div>
+						<div class="form-group">
+							<button type="submit" name="recovery" class="btn btn-primary btn-block">Восстановить пароль</button>
+							<p><a href="#window-auth-forms" class="back_link js-jump_forms" data-id="#window-auth-forms"><span class="fa fa-arrow-circle-left"></span> Назад к форме входа</a></p>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-rules" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Условиями использования и политика конфиденциальности</h4>
+					<span class="close" data-dismiss="modal" aria-label="Close" style="text-align: center;" role="button"><span aria-hidden="true">&times;</span></span>
+				</div>
+				<div class="modal-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolore ipsam quis quas perferendis ut eligendi, incidunt quam doloribus similique magnam explicabo, hic, laudantium ea nostrum iure sint neque. Sequi.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /content -->
+	<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__text">Footer</div>
+    </div>
+</footer>
+<script src="js/vendor/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+<!-- build:plugins -->
+<script src="js/plugins/bootstrap.js"></script>
+<script src="js/plugins/bootstrap-select.js"></script>
+<script src="js/plugins/defaults-ru_RU.js"></script>
+<!-- endbuild -->
+<script src="js/main.js"></script>
+</body>
+</html>

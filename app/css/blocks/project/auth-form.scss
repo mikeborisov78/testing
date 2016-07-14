@@ -1,0 +1,152 @@
+.window {
+	font-family: $font-family-light;
+	margin: 0 auto;
+	width: 360px;
+	background-color: $gray-fc;
+	text-align: center;
+	box-shadow: 0 0 15px rgba(0,0,0,.2);
+	border-radius: $border-radius-base;
+	border: 1px solid $gray-c7;
+
+	@media (min-width: $screen-sm-min) {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 20vh;
+		//top: 50vh;
+		//transform: translateY(-50%);
+	}
+	@media (max-width: $screen-xs-max) {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	&__header {
+		padding: 35px 0 20px;
+
+		.logotype {
+			margin: 0;
+			line-height: 1;
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.back_link {
+		font-size: 12px;
+		color: $gray-2;
+	}
+}
+
+.window_form {
+	margin: 0;
+	padding: 0 20px;
+
+	&__title {
+		margin-bottom: 10px;
+		font-size: 18px;
+		color: $gray-3;
+	}
+	&__info {
+		color: $gray-9;
+	}
+	p {
+		margin: 15px 0 0;
+		color: $gray-3;
+
+		a {
+			color: $gray-9;
+		}
+	}
+
+	.form-control {
+		border-bottom-width: 0;
+		&:last-child {
+			border-bottom-width: 1px;
+		}
+		&:focus {
+			border-color: $brand-primary !important;
+		}
+		&:focus + .form-control {
+			border-top-color: $brand-primary !important;
+		}
+		&.error {
+			border-color: $brand-danger;
+		}
+		&.error + .form-control {
+			border-top-color: $brand-danger ;
+		}
+		&.error:focus {
+			border-color: $brand-danger !important;
+		}
+		&.error:focus + .form-control {
+			border-top-color: $brand-danger !important;
+		}
+	}
+
+//	.form-control {
+//		position: relative;
+//
+//		&:focus {
+//			z-index: 1;
+//		}
+//	}
+//	.form-control + .form-control {
+//		margin-top: -1px;
+//	}
+
+}
+
+.tab_nav {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 20px;
+	border-bottom: 1px solid $gray-d;
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		line-height: 1;
+		margin: 0 3px;
+	}
+	&__link {
+		position: relative;
+		display: block;
+		padding: 15px 0;
+		width: 115px;
+		color: $gray-3;
+
+		&:focus {
+			color: $gray-3;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			height: 3px;
+			background: transparent;
+			transform: scaleX(0);
+			transition: transform 100ms linear;
+		}
+	}
+	&__item.active &__link {
+		font-weight: 600;
+
+		&:after {
+			transform: scaleX(1);
+			background: $brand-primary;
+		}
+	}
+}
+
+.form_recovery {
+	padding-top: 20px;
+	margin-top: 15px;
+	border-top: 1px solid $gray-d;
+}
+
